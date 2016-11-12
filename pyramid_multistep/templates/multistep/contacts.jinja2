@@ -1,0 +1,12 @@
+{% extends 'layouts/default.jinja2' %}
+{% from '_form.jinja2' import render_field %}
+
+{% block title %}Contacts!{% endblock %}
+
+{% block content %}
+    <form method="POST" action="{{ request.route_path('multistep.contacts') }}">
+        {{ render_field(form.contact_sport) }}
+        {{ render_field(form.wears_contacts) }}
+        <button type="submit" class="btn">Update info</button>
+    </form>
+{% endblock %}

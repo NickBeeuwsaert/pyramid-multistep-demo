@@ -1,0 +1,19 @@
+{% extends 'layouts/default.jinja2' %}
+{% from '_form.jinja2' import render_field %}
+
+{% block title %}Confirmation!{% endblock %}
+
+{% block content %}
+    <form action="{{ request.route_path('multistep.confirm') }}" method="POST">
+        {% for key, route, name in view.steps[:-1] %}
+            <h1><a href="{{ request.route_path(route) }}">{{ name }}</a></h1>
+            <dl>
+            {% for field, value in data[key].items() %}
+                <dt>{{ field }}</dt>
+                <dd>{{ value }}</dd>
+            {% endfor %}
+            </dl>
+        {% endfor %}
+        <button class="btn">Confirm!</button>
+    </form>
+{% endblock %}

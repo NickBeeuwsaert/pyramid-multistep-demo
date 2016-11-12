@@ -1,0 +1,59 @@
+html, body {
+    font-family: sans-serif;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+/** FLASH MESSAGES */
+.flash {
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+.flash.error {
+    background: hsl(0, 100%, 85%);
+    color: hsl(0, 50%, 40%);
+}
+
+.flash.warning {
+    background: hsl(60, 100%, 85%);
+    color: hsl(60, 50%, 40%);
+}
+
+.flash.success {
+    background: hsl(120, 100%, 75%);
+    color: hsl(120, 50%, 40%);
+}
+
+.flash.info {
+    background: hsl(200, 100%, 85%);
+    color: hsl(200, 50%, 40%);
+}
+
+/** FORMS */
+.form-group {
+    margin: 0.5em 0;
+}
+
+.form-control {
+    font-size: 1em;
+    padding: 0.25em;
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    font-size: 1em;
+    padding: 0.5em;
+
+    background: #ccc;
+    color: black;
+    border: 0;
+}
+
+.btn.primary {
+    background: hsl(210, 90%, 50%);
+    color: white;
+}

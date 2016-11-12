@@ -1,0 +1,2 @@
+recursive-include pyramid_multistep/templates *.jinja2
+recursive-include pyramid_multistep/static *

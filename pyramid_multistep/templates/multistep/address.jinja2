@@ -1,0 +1,14 @@
+{% extends 'layouts/default.jinja2' %}
+{% from '_form.jinja2' import render_field %}
+
+{% block title %}Address!{% endblock %}
+
+{% block content %}
+    <form method="POST" action="{{ request.route_path('multistep.address') }}">
+        {{ render_field(form.street) }}
+        {{ render_field(form.city) }}
+        {{ render_field(form.state) }}
+        {{ render_field(form.postal) }}
+        <button type="submit" class="btn">Update info</button>
+    </form>
+{% endblock %}

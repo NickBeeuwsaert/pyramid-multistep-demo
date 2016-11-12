@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block styles %}
+      <link href="{{ req.static_path('pyramid_multistep:static/css/main.css') }}" rel="stylesheet" type="text/css">
+    {% endblock %}
+
+    {% block scripts %}
+    {% endblock %}
+  </head>
+  <body>
+    {% for queue in ['success', 'warning', 'info', 'error'] %}
+      {% for message in request.session.pop_flash(queue) %}
+        <div class="flash {{ queue }}">{{ message }}</div>
+      {% endfor %}
+    {% endfor %}
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
