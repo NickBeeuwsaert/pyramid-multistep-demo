@@ -1,13 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='pyramid_multistep',
     version='0.0.0',
     author='Nick Beeuwsaert',
     license='MIT',
-    packages=[
-        'pyramid_multistep'
-    ],
+    packages=find_packages(),
     install_requires=[
         'pyramid',
         'pyramid-beaker',
